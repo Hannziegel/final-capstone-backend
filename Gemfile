@@ -6,6 +6,8 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -52,3 +54,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "ruby-lsp", "~> 0.3.7", :group => :development

@@ -303,7 +303,6 @@ DEPENDENCIES
   devise-jwt
   dotenv-rails
   jsonapi-serializer
-
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

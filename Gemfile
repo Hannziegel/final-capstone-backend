@@ -10,7 +10,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'
 gem 'devise-jwt'
-gem 'fast_jsonapi'
+gem 'jsonapi-serializer'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'

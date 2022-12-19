@@ -1,4 +1,4 @@
-class Api::V1::AccommodationsController < Api::V1::ApplicationController
+class Api::V1::AccommodationsController < ApplicationController
   before_action :set_accommodation, only: %i[ show update destroy ]
 
   # GET /accommodations

@@ -10,6 +10,8 @@
 # Ignore .env database credentials
 /.env
 
+/commands.txt
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

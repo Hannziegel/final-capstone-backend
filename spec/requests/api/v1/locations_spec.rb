@@ -1,4 +1,4 @@
-require 'swagger_helper'
+# require 'swagger_helper'
 
-RSpec.describe 'api/v1/locations', type: :request do
-end
+# RSpec.describe 'api/v1/locations', type: :request do
+# end

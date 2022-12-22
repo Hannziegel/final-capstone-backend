@@ -1,114 +1,114 @@
-require 'swagger_helper'
+# require 'swagger_helper'
 
-RSpec.describe 'users/registrations', type: :request do
+# RSpec.describe 'users/registrations', type: :request do
 
-  path '/signup/cancel' do
+#   path '/signup/cancel' do
 
-    get('cancel registration') do
-      response(200, 'successful') do
+#     get('cancel registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-  end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
+#   end
 
-  path '/signup/sign_up' do
+#   path '/signup/sign_up' do
 
-    get('new registration') do
-      response(200, 'successful') do
+#     get('new registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-  end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
+#   end
 
-  path '/signup/edit' do
+#   path '/signup/edit' do
 
-    get('edit registration') do
-      response(200, 'successful') do
+#     get('edit registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-  end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
+#   end
 
-  path '/signup' do
+#   path '/signup' do
 
-    patch('update registration') do
-      response(200, 'successful') do
+#     patch('update registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
 
-    put('update registration') do
-      response(200, 'successful') do
+#     put('update registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
 
-    delete('delete registration') do
-      response(200, 'successful') do
+#     delete('delete registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
 
-    post('create registration') do
-      response(200, 'successful') do
+#     post('create registration') do
+#       response(200, 'successful') do
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
-  end
-end
+#         after do |example|
+#           example.metadata[:response][:content] = {
+#             'application/json' => {
+#               example: JSON.parse(response.body, symbolize_names: true)
+#             }
+#           }
+#         end
+#         run_test!
+#       end
+#     end
+#   end
+# end

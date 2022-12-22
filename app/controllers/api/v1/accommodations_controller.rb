@@ -1,5 +1,5 @@
 class Api::V1::AccommodationsController < ApplicationController
-  before_action :set_accommodation, only: %i[ show update destroy ]
+  before_action :set_accommodation, only: %i[show update destroy]
 
   # GET /accommodations
   def index
@@ -39,13 +39,14 @@ class Api::V1::AccommodationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_accommodation
-      @accommodation = Accommodation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def accommodation_params
-      params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_accommodation
+    @accommodation = Accommodation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def accommodation_params
+    params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id)
+  end
 end

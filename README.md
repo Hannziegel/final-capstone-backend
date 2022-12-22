@@ -168,10 +168,11 @@ or $ spec
 - Twitter: [@ElarabFouad](https://twitter.com/ElarabFouad)
 - LinkedIn: [Karam Fouad](https://www.linkedin.com/in/karam-fouad-179830214/)
 
-👤 **Karla Delgado** 
-- GitHub: [@](https://github.com/) 
-- Twitter: [@ElarabFouad](https://twitter.com/)
-- LinkedIn: [Karla Delgado](https://www.linkedin.com/in/) 
+:woman_technologist: **Karla Delgado** :writing_hand: 
+
+- GitHub: [@karlavdelgadof](https://github.com/karlavdelgadof)
+- Twitter: [@karlavdelgadof](https://twitter.com/karlavdelgadof)
+- LinkedIn: [Karla Delgado](https://www.linkedin.com/in/karla-delgado-613a32239/) 
 
 👤 **Rodrigo Johann Reckziegel Nunes** 
 - GitHub: [@Hannziegel](https://github.com/Hannziegel)

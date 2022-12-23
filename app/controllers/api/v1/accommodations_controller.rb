@@ -4,8 +4,8 @@ class Api::V1::AccommodationsController < ApplicationController
   # GET /accommodations
   def index
     @accommodations = Accommodation.all
-
-    render json: @accommodations
+    @locations = Location.all
+    render json: {accommodations: @accommodations, locations: @locations}
   end
 
   # GET /accommodations/1

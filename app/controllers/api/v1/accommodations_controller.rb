@@ -36,6 +36,7 @@ class Api::V1::AccommodationsController < ApplicationController
   # DELETE /accommodations/1
   def destroy
     @accommodation.destroy
+    render json: "Accomodation of id: #{params[:id]} deleted"
   end
 
   private

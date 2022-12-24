@@ -168,6 +168,16 @@ or $ spec
 - Twitter: [@ElarabFouad](https://twitter.com/ElarabFouad)
 - LinkedIn: [Karam Fouad](https://www.linkedin.com/in/karam-fouad-179830214/)
 
+👤 **Karla Delgado** 
+- GitHub: [@](https://github.com/) 
+- Twitter: [@ElarabFouad](https://twitter.com/)
+- LinkedIn: [Karla Delgado](https://www.linkedin.com/in/) 
+
+👤 **Rodrigo Johann Reckziegel Nunes** 
+- GitHub: [@Hannziegel](https://github.com/Hannziegel)
+- LinkedIn: [Rodrigo Johann Reckziegel Nunes](https://www.linkedin.com/rodrigojrnunes) 
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

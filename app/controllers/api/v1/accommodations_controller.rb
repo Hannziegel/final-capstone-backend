@@ -5,12 +5,22 @@ class Api::V1::AccommodationsController < ApplicationController
   def index
     @accommodations = Accommodation.all
     @locations = Location.all
+    # @result = @accommodations.each do |accommodation|
+    #   @location = Location.where(id: accommodation.location_id)
+    #   @accomodations << @location
+    # end
+
     render json: {accommodations: @accommodations, locations: @locations}
   end
 
   # GET /accommodations/1
   def show
     render json: @accommodation
+  end
+
+  def new
+    @accomodation = Accommodation.new(accommodation_params)
+    @accomodation.location.build
   end
 
   # POST /accommodations
@@ -48,6 +58,6 @@ class Api::V1::AccommodationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def accommodation_params
-    params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id)
+    params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id, location_attributes: [:country, :city])
   end
 end

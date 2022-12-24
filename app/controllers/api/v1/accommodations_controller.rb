@@ -10,7 +10,7 @@ class Api::V1::AccommodationsController < ApplicationController
     #   @accomodations << @location
     # end
 
-    render json: {accommodations: @accommodations, locations: @locations}
+    render json: { accommodations: @accommodations, locations: @locations }
   end
 
   # GET /accommodations/1
@@ -58,6 +58,7 @@ class Api::V1::AccommodationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def accommodation_params
-    params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id, location_attributes: [:country, :city])
+    params.require(:accommodation).permit(:user_id, :description, :address, :rented, :location_id,
+                                          location_attributes: %i[country city])
   end
 end

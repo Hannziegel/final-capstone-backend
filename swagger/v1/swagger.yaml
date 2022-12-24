@@ -1,0 +1,44 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/accommodations":
+    get:
+      summary: list accommodations
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create accommodation
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  types: number
+                user_id:
+                  types: number
+                description:
+                  type: string
+                address:
+                  types: string
+                rented:
+                  type: string
+                location_id:
+                  type: number
+              required:
+              - name
+              - model
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

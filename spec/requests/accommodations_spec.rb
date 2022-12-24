@@ -12,116 +12,116 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/accommodations", type: :request do
+RSpec.describe '/accommodations', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Accommodation. As you add validations to Accommodation, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) do
+    skip('Add a hash of attributes valid for your model')
+  end
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+  end
 
   # This should return the minimal set of values that should be in the headers
   # in order to pass any filters (e.g. authentication) defined in
   # AccommodationsController, or in your router and rack
   # middleware. Be sure to keep this updated too.
-  let(:valid_headers) {
+  let(:valid_headers) do
     {}
-  }
+  end
 
-  describe "GET /index" do
-    it "renders a successful response" do
+  describe 'GET /index' do
+    it 'renders a successful response' do
       Accommodation.create! valid_attributes
       get accommodations_url, headers: valid_headers, as: :json
       expect(response).to be_successful
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
+  describe 'GET /show' do
+    it 'renders a successful response' do
       accommodation = Accommodation.create! valid_attributes
       get accommodation_url(accommodation), as: :json
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Accommodation" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Accommodation' do
+        expect do
           post accommodations_url,
                params: { accommodation: valid_attributes }, headers: valid_headers, as: :json
-        }.to change(Accommodation, :count).by(1)
+        end.to change(Accommodation, :count).by(1)
       end
 
-      it "renders a JSON response with the new accommodation" do
+      it 'renders a JSON response with the new accommodation' do
         post accommodations_url,
              params: { accommodation: valid_attributes }, headers: valid_headers, as: :json
         expect(response).to have_http_status(:created)
-        expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Accommodation" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Accommodation' do
+        expect do
           post accommodations_url,
                params: { accommodation: invalid_attributes }, as: :json
-        }.to change(Accommodation, :count).by(0)
+        end.to change(Accommodation, :count).by(0)
       end
 
-      it "renders a JSON response with errors for the new accommodation" do
+      it 'renders a JSON response with errors for the new accommodation' do
         post accommodations_url,
              params: { accommodation: invalid_attributes }, headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      it "updates the requested accommodation" do
+      it 'updates the requested accommodation' do
         accommodation = Accommodation.create! valid_attributes
         patch accommodation_url(accommodation),
               params: { accommodation: new_attributes }, headers: valid_headers, as: :json
         accommodation.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "renders a JSON response with the accommodation" do
+      it 'renders a JSON response with the accommodation' do
         accommodation = Accommodation.create! valid_attributes
         patch accommodation_url(accommodation),
               params: { accommodation: new_attributes }, headers: valid_headers, as: :json
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
 
-    context "with invalid parameters" do
-      it "renders a JSON response with errors for the accommodation" do
+    context 'with invalid parameters' do
+      it 'renders a JSON response with errors for the accommodation' do
         accommodation = Accommodation.create! valid_attributes
         patch accommodation_url(accommodation),
               params: { accommodation: invalid_attributes }, headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested accommodation" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested accommodation' do
       accommodation = Accommodation.create! valid_attributes
-      expect {
+      expect do
         delete accommodation_url(accommodation), headers: valid_headers, as: :json
-      }.to change(Accommodation, :count).by(-1)
+      end.to change(Accommodation, :count).by(-1)
     end
   end
 end

@@ -12,6 +12,9 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
 
+# API documentation
+gem 'rswag'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -53,6 +56,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'rswag-specs'
 end
 
 group :development do
